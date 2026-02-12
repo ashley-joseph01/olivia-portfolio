@@ -10,16 +10,27 @@
 <body>
 
     <header class="flex--column">
-        <h1>OLIVA ...</h1>
+        <h1>OLIVA DINKELMAN</h1>
         <h2>director & producer</h2>
         
         <div class="flex--row header__group">
             <nav>
-                <i class="fa-solid fa-bars"></i>
+                <div id="navWindow" class="overlay">
+                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-x"></i></a>
+
+                    <div class="overlay__content">
+                        <a href="/">HOME</a>
+                        <a href="work/">MY WORK</a>
+                        <a href="resume/">RESUME</a>
+                    </div>
+
+                </div>
+
+                <span onclick="openNav()"><i class="fa-solid fa-bars"></i></span>
             </nav>
             <ul class="flex--row header__contact">
-                <a href=""><li>EMAIL</li></a>
-                <a href=""><li>SOCIALS</li></a>
+                <a href=""><li>INSTAGRAM</li></a>
+                <a href=""><li>YOUTUBE</li></a>
             </ul>
         </div>
 
@@ -31,11 +42,25 @@
                 <img src="" alt="">
             </div>
             <div class="group__r">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non cum explicabo veritatis quod obcaecati animi quidem perferendis odio quia nihil! Reiciendis vitae facere non, expedita blanditiis commodi numquam exercitationem possimus.</p>
+                <p>My name is Olivia Dinkelman. I am a director / producer from Salt Lake County, Utah studying film at Utah Valley University.
+                </p>
                 <br>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt est omnis atque obcaecati magni distinctio aliquam delectus inventore, animi provident? Laudantium recusandae sunt dolores nobis ullam quas voluptates magni doloribus?</p>
+                <p>
+                I have fallen in love with film a million times over in my life. There isn’t a period of growth during my 19 years that I can’t associate with some sort of film or theme. I know this isn’t an experience limited to just myself. We all crave being seen, and we all desire to see.
+                </p>
                 <br>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet magni recusandae similique? Debitis, rem? Sequi obcaecati corporis suscipit nostrum, excepturi recusandae? Quaerat magnam repudiandae ad rem perferendis in exercitationem ducimus.</p>
+                <p>
+                In the brief year and a half that I’ve begun to seriously consider that filmmaking can be a career path for me, a way I can creatively enjoy my life, I have fallen in love with every bit of the process; writing the script, creating a budget, directing actors, and putting it all together.
+                </p>
+                <br>
+                <p>
+                My strong belief is that our entire reason for life is to speak, to share, and to learn from one another. Film encompasses all of that for me and many others. Creation, and appreciating others’ creation and passion, is a way for all of us to connect with one another. I want to spend my life telling stories, whether they be real, unfiltered presentations of someone’s life, or a narrative representation of a feeling we all can understand and have experienced on some level.
+                </p>
+                <br>
+                <p>
+                My goal as a student at Utah Valley University is to better my craft. I want to find more confidence in this world of film, because no matter how much you learn, there’s always something else you can
+                find.</p>
+                
             </div>
         </div>
 
@@ -43,16 +68,18 @@
     </main>
 
     <footer class="flex--row">
-        <div class="footer__group">
+        <div class="flex--column footer__group">
             <h3>Thanks for Visiting!</h3>
             <ul class="flex--row footer__group--insert">
-                <a href=""><li>EMAIL</li></a>
-                <a href=""><li>SOCIALS</li></a>
+                <a href="https://www.instagram.com/oliviamdinkelman/" target="_blank"><li>INSTAGRAM</li></a>
+                <a href="https://www.youtube.com/@DropscreenProductions" target="_blank"><li>YOUTUBE</li></a>
                 <a href=""><li>WEBSITE BY <a href="">AJ</a></li></a>
             </ul>
         </div>
         
     </footer>
  
+    <script src="scripts.js"></script>
+
 </body>
 </html>
