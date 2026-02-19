@@ -6,6 +6,7 @@
     --burntOrange: #9B483B;
     --salmon: #C77362;
     --tan: #EDDECF;
+    --tanDarker: #d4b99b;
 }
 
 * {
@@ -35,14 +36,22 @@ body {
 
 h1 {
     font-size: 45px;
+    color: var(--burntOrange);
+    text-align: center;
 }
 
 h2 {
     font-size: 35px;
+    
 }
 
 h3 {
     font-size: 30px;
+    color: var(--burntOrange);
+}
+
+h4 {
+    font-weight: bold;
 }
 
 .flex--row {
@@ -61,6 +70,14 @@ h3 {
     align-items: center;
     gap: 15px;
 
+
+}
+
+.flex--columnAlt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
 }
 
@@ -88,9 +105,10 @@ nav {
 
 .header__contact {
     font-size: 18px;
+
 }
 
-main img {
+.group__l img {
     width: 300px;
     height: 300px;
     background-color: var(--salmon);
@@ -105,8 +123,9 @@ main p {
     padding: 15px;
     justify-content: center;
 
-
     background-color: var(--tan);
+
+    /* border: solid red 1px; */
 }
 
 .group__r {
@@ -135,62 +154,118 @@ footer {
     justify-content: center;
 }
 
+.resume--item {
+    font-size: 25px;
+    padding: 20px;
+    width: 90%;
+    text-align: center;
 
-/* @ NAV OVERLAY */
-
-/* The Overlay (background) */
-.overlay {
-  /* Height & width depends on how you want to reveal the overlay (see JS below) */   
-  height: 100%;
-  width: 0;
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); /* Black fallback color */
-  background-color: rgba(0,0,0, 0.9); /* Black w/opacity */
-  overflow-x: hidden; /* Disable horizontal scroll */
-  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+    background-color: var(--forest);
+    color: var(--tan);
 }
 
-/* Position the content inside the overlay */
-.overlay-content {
-  position: relative;
-  top: 25%; /* 25% from the top */
-  width: 100%; /* 100% width */
-  text-align: center; /* Centered text/links */
-  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+.resume--item:nth-child(even) {
+    background-color: var(--fern);
 }
 
-/* The navigation links inside the overlay */
-.overlay a {
-  padding: 8px;
-  text-decoration: none;
-  font-size: 36px;
-  color: #818181;
-  display: block; /* Display block instead of inline */
-  transition: 0.3s; /* Transition effects on hover (color) */
+.work {
+    width: 100%;
+
+    /* border: solid 5px blue; */
 }
 
-/* When you mouse over the navigation links, change their color */
-.overlay a:hover, .overlay a:focus {
-  color: #f1f1f1;
+.work--group {
+    width: 80%;
+    padding: 15px;
+    text-align: center;
+
+    border: solid 3px var(--burntOrange);
+
+
 }
 
-/* Position the close button (top right corner) */
-.overlay .closebtn {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+
+
+.project--simple {
+    padding: 2px;
 }
 
-/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
-  .overlay a {font-size: 20px}
-  .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
-  }
+.project--card {
+    border: solid 2px var(--tanDarker);
+    background-color: var(--tan);
+    padding: 15px;
+
 }
+
+.project--card__title {
+    padding: 15px;
+    background-color: var(--salmon);
+    color: var(--tan);
+    font-size: 20px;
+
+}
+
+.project--card__title a {
+    text-decoration: underline;
+    color: var(--tan);
+}
+
+.featured {
+    padding: 15px;
+
+}
+
+.work--group h2 {
+    color: var(--burntOrange);
+}
+
+.project--card__featured {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+
+    gap: 5px;
+    border: solid 2px var(--tanDarker);
+    background-color: var(--tan);
+    padding: 15px;
+
+
+}
+
+
+.featured {
+    width: 1000px;
+}
+
+.button {
+    background-color: var(--fern);
+    border: solid 2px var(--fern);
+    width: 100%;
+
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+.button a {
+    color: var(--tan);
+}
+
+/* @ MOBILE */
+
+@media(max-width: 768px) {
+
+
+
+    .flex--row {
+        flex-direction: column;
+    }
+
+    .group__r {
+        width: 100%;
+    }
+
+}
+
