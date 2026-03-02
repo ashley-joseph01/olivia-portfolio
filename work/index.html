@@ -9,17 +9,23 @@
 </head>
 <body>
 
+    <nav class="floating-nav">
+        <input type="checkbox" id="menuCheckbox" class="floating-nav__checkbox">
+        <span></span><span></span><span></span>
+        <ul class="floating-nav__menu">
+            <li><a href="../">Home</a></li>
+            <li><a href="#">
+                <label for="menuCheckbox" onclick="this.parentNode.click()">Work</label>
+            </a></li>
+            <li><a href="../resume/">Resume</a></li>
+        </ul>
+    </nav>
     
     <header class="flex--column">
         <h1>OLIVA DINKELMAN</h1>
         <h2>WORK</h2>
         
         <div class="flex--row header__group">
-            <nav>
-                <a href="../">h</a>
-               <a href="../work/">w</a>
-               <a href="../resume/">r</a>
-            </nav>
             <ul class="flex--row header__contact">
                 <a href=""><li>INSTAGRAM</li></a>
                 <a href=""><li>YOUTUBE</li></a>

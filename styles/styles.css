@@ -22,8 +22,10 @@
     color: var(--forest);
 
     font-family: "Times New Roman", Times, serif;
-    line-height: 1.2;
+    line-height: 1.5;
 }
+
+h1, h2, h3 { line-height: 1.2;}
 
 html {
     background: #d1bca5;
@@ -142,7 +144,7 @@ main p {
 
 .home__group {
     /* width: 80%; */
-    padding: 15px;
+    padding: 30px;
     justify-content: center;
 
     background-color: var(--tan);
@@ -395,10 +397,9 @@ footer {
 .floating-nav {
     height: 50px;
     width: 50px;
-    background-color: crimson;
     position: fixed;
-    top: .25em;
-    left: .25em;
+    top: 1.25rem;
+    left: 1.25rem;  
 
     z-index: 1;
 
@@ -407,26 +408,35 @@ footer {
     -moz-user-select: none;
     -ms-user-select: none;
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--tanDarker);
+    /* outline: 3px solid var(--tanDarker); */
+    border-radius: 100%;
 }
 
 
-.floating-nav a {
+.floating-nav a, .floating-nav a label {
     text-decoration: none;
-    color: palegreen;
     transition: color .3s ease;
+    font-size: 3rem;
+    color: var(--tan);
 }
 
-.floating-nav a:hover {
-    color: tomato;
+.floating-nav a:hover, .floating-nav a:hover label {
+    color: var(--tanDarker);
 }
 
 .floating-nav__checkbox {
     display: block;
-    width: 40px;
-    height: 32px;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    top: -7px;
-    left: -5px;
+    /* top: -7px;
+    left: -5px; */
     
     cursor: pointer;
     
@@ -437,22 +447,23 @@ footer {
 }
 
 .floating-nav span {
-      display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  
-  background: #cdcdcd;
-  border-radius: 3px;
-  
-  z-index: 1;
-  
-  transform-origin: 4px 0px;
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-top: 2.5px;
+    margin-bottom: 2.5px;
+    position: relative;
+    
+    background: var(--forest);
+    border-radius: 3px;
+    
+    z-index: 1;
+    
+    transform-origin: 4px 0px;
+    
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                opacity 0.55s ease;
 }
 
 
@@ -469,7 +480,11 @@ footer {
 .floating-nav__checkbox:checked ~ span {
     opacity: 1;
     transform: rotate(45deg) translate(-2px, -1px);
-    background: sandybrown;
+    background-color: var(--tan);
+}
+
+.floating-nav__checkbox:checked:hover ~ span {
+    background-color: var(--tanDarker);
 }
 
 .floating-nav__checkbox:checked ~ span:nth-last-child(3) {
@@ -485,16 +500,13 @@ footer {
 
 
 .floating-nav__menu {
-    position: absolute;
-    max-width: 400px;
-    width: 100vw;
-    max-height: 100vh;
-    margin: -100px 0 0 -50px;
+    position: fixed;
+    inset: 0;
     padding: 50px;
-    padding-top: 125px;
+
     box-sizing: border-box;
     overflow-y: auto;
-    background: #ededed;
+    background: var(--burntOrange);
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
     /* to stop flickering of text in safari */
@@ -503,8 +515,16 @@ footer {
     transform: translate(-100%, 0);
     
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
+.floating-nav__menu > *:not(:last-child) {
+    border-bottom: 2px solid var(--salmon);
+}
 
 .floating-nav__menu li {
     padding: 10px 0;
@@ -518,6 +538,8 @@ footer {
 
 .floating-nav__checkbox:checked ~ .floating-nav__menu {
     transform: none;
-    /* height: 100%;
-    width: 100%; */
+}
+
+body:has(.floating-nav__checkbox:checked) {
+    overflow-y: hidden;
 }
